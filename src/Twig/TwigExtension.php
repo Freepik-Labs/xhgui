@@ -75,7 +75,7 @@ class TwigExtension extends AbstractExtension
             $query = '?' . http_build_query($queryargs);
         }
 
-        $url = $this->router->urlFor($name);
+        $url = $this->router->pathFor($name);
 
         // Remove basePath from url
         if ($this->basePath && strpos($url, $this->basePath) === 0) {
